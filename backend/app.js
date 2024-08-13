@@ -171,7 +171,7 @@ app.post('/api/generate-token', (req, res) => {
 // get data (SERVICE) .json เขียนไงวะ?
 
 app.get('/intel', (req, res, next)=>{
-  const query = "SELECT * FROM information WHERE = ?"
+  const query = "SELECT * FROM information WHERE id = ?"
   connection.execute(query, (err, results, fields)=>{
     if(err){
       console.log(err)
